@@ -27,7 +27,7 @@ function minify( $css ) {
 	$css = preg_replace( '/(,|:|;|\{|}|\*\/|>) /', '$1', $css );
 
 	// Remove space before , ; { } ( ) >
-	$css = preg_replace( '/ (,|;|\{|}|\(|\)|>)/', '$1', $css );
+	$css = preg_replace( '/ (,|;|\{|}|\)|>)/', '$1', $css );
 
 	// Strips leading 0 on decimal values (converts 0.5px into .5px)
 	$css = preg_replace( '/(:| )0\.([0-9]+)(%|em|ex|px|in|cm|mm|pt|pc)/i', '${1}.${2}${3}', $css );
